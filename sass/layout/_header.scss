@@ -1,0 +1,21 @@
+#header {
+  padding: 10px;
+  width: 100%;
+  @include flex-align-center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: $color-bg-primary;
+  @include shadow;
+  i {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    &.hidden {
+      display: none !important;
+    }
+  }
+  h1 {
+    margin: 0px;
+  }
+}

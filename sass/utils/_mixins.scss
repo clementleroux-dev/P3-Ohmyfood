@@ -1,0 +1,83 @@
+// breakpoint
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin laptop-only {
+  @media screen and (max-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+// shadow
+
+@mixin shadow {
+  box-shadow: 0px 4px 4px 0px rgba(176, 173, 173, 0.17);
+}
+
+@mixin shadow-hover {
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.47);
+}
+
+// Background gradient
+@mixin background-gradient {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+}
+
+@mixin background-gradient--light {
+  background: lighten ($color-primary, 10%);
+  background: linear-gradient(
+    0deg,
+    lighten($color-primary, 10%) 0%,
+    lighten($color-secondary, 10%) 100%
+  );
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-align-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-align-start {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+@mixin card {
+  width: 100%;
+  display: flex;
+  margin: 15px 0;
+  border-radius: 15px;
+  @include shadow;
+  background-color: white;
+  padding: 5px;
+  &:hover {
+    @include shadow-hover;
+  }
+}

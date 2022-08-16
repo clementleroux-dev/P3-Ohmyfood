@@ -1,0 +1,81 @@
+// SECTION LOCALISATION
+.localisation {
+  @include flex-align-center;
+  background-color: $color-bg-secondary;
+  z-index: -1;
+  padding-left: 50px;
+
+  i {
+    margin-right: 0px;
+  }
+  form {
+    font-weight: map-get($font-weights, "bold");
+    margin: 15px;
+    input {
+      color: $color-text-secondary;
+      background-color: transparent;
+      border: 0px;
+    }
+  }
+}
+// SECTION EXPLORE
+.explore {
+  background-color: $color-bg-tertiary;
+  @include flex-align-center;
+  flex-direction: column;
+  padding: 40px;
+  h2 {
+    margin: 0px;
+  }
+  p {
+    color: $color-text-tertiary;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+// SECTION STEP
+.step {
+  h2 {
+    width: 100%;
+    @include flex-align-start;
+  }
+  p:first-child {
+    @include flex-align-center;
+    background-color: $color-primary;
+    color: $color-bg-primary;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: 20px;
+  }
+  i {
+    position: absolute;
+    left: 80px;
+  }
+  p:last-child {
+    font-weight: map-get($font-weights, medium);
+  }
+}
+
+// SECTION RESTAURANT
+.restaurant {
+  background-color: $color-bg-secondary;
+  h2 {
+    width: 100%;
+    @include flex-align-start;
+  }
+  &__body {
+    line-height: 10px;
+    padding: 5px;
+    @include flex-align-between;
+    flex-direction: row;
+    p {
+      color: $color-text-secondary;
+    }
+    h3 {
+      margin-top: 10px;
+    }
+  }
+}

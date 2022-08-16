@@ -1,0 +1,10 @@
+.container {
+  @include flex-align-center;
+  flex-direction: column;
+  padding: 30px;
+}
+.container--start {
+  @include flex-align-start;
+  flex-direction: column;
+  padding: 30px;
+}

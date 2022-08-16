@@ -1,0 +1,32 @@
+.step__card {
+  @include card;
+  @include flex-align-center;
+  &:hover {
+    background-color: rgba($color-primary, 0.1);
+    i {
+      color: $color-primary;
+    }
+  }
+}
+
+.restaurant__card {
+  @include card;
+  position: relative;
+  max-height: 300px;
+  width: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    max-height: calc(100% - 70px);
+    border-radius: 15px 15px 0 0;
+  }
+  &--new {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #99e2d0;
+    border-radius: 5px;
+    color: #1f997c;
+    padding: 10px;
+  }
+}

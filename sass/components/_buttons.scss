@@ -1,0 +1,40 @@
+.btn {
+  border: 0px;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 15px;
+  @include shadow;
+  &--pink {
+    @include background-gradient;
+    color: $color-bg-primary;
+    &:hover {
+      @include shadow-hover;
+      @include background-gradient--light;
+    }
+  }
+}
+
+// SECTION RESTAURANT -- HEART
+.nolike {
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+}
+
+.like::before {
+  display: none;
+  background: linear-gradient(225deg, $color-primary 20%, $color-secondary 100%)
+    0 0 / 3em 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 01em;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.nolike:hover .like::before {
+  display: block;
+  animation: sizing 0.5s;
+}

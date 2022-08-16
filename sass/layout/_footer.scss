@@ -1,0 +1,14 @@
+#footer {
+  background-color: $color-bg-four;
+  padding-top: 5px;
+  & a {
+    color: $color-bg-secondary;
+    line-height: 30px;
+    & i {
+      margin-right: 10px;
+    }
+  }
+}
+[data-value="false"] {
+  display: none;
+}
