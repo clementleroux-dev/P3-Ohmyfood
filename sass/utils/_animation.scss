@@ -65,3 +65,25 @@
     z-index: -100;
   }
 }
+
+@keyframes rotate-checked {
+  0% {
+    transform: rotateZ(200deg);
+  }
+  50% {
+    transform: rotateZ(-100deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes checked {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+    max-width: 100px;
+  }
+}

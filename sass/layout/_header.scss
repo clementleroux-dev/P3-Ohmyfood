@@ -4,9 +4,13 @@
   @include flex-align-center;
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 200;
   background-color: $color-bg-primary;
   @include shadow;
+
+  h1 {
+    margin: 0;
+  }
   i {
     position: absolute;
     left: 20px;
@@ -14,8 +18,5 @@
     &.hidden {
       display: none !important;
     }
-  }
-  h1 {
-    margin: 0px;
   }
 }
