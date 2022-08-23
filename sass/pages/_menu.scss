@@ -1,0 +1,104 @@
+#menu-main {
+  width: 100%;
+  padding: 0px;
+  img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+  }
+  section {
+    width: 100%;
+    padding: 20px;
+    border-radius: 45px 45px 0 0;
+    background-color: $color-white-softer;
+    z-index: 100;
+    margin-top: -35px;
+    flex-direction: column;
+    @include flex-align-center;
+  }
+  article {
+    width: 100%;
+  }
+  button {
+    margin: 50px;
+    width: 20%;
+    min-width: 185px;
+  }
+  h2 {
+    position: relative;
+    line-height: 1.2em;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 1.2em;
+      height: 0;
+      width: 40px;
+      content: "";
+      border-top: 2.5px solid $color-tertiary;
+    }
+  }
+}
+
+.menu {
+  &__header {
+    width: 100%;
+    @include flex-align-between;
+    h1 {
+      margin: 10px 25px 0 0;
+    }
+  }
+  &__card {
+    @include card;
+    @include flex-align-between;
+    height: 80px;
+    padding: 0px;
+    background-color: $color-white;
+    &__body {
+      padding: 5px;
+      p,
+      h3 {
+        margin: 5px;
+      }
+    }
+    &__price {
+      text-align: end;
+      margin-top: 30px;
+      flex-grow: 1;
+      padding-right: 40px;
+    }
+    &__check {
+      display: none;
+    }
+    &:hover {
+      .menu__card__check {
+        background-color: $color-tertiary;
+        color: white;
+        border-radius: 0 15px 15px 0;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        animation: checked 1s ease;
+        animation-fill-mode: both;
+        & i {
+          animation: rotate-checked 0.75s;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: map-get($breakpoints, laptop)) {
+  #menu-main section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  #menu-main article {
+    width: 32%;
+  }
+  #menu-main button {
+    margin: auto;
+  }
+}

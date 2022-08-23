@@ -1,20 +1,22 @@
+// utils
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
 @import "./utils/maps";
 @import "./utils/animation";
 @import "./utils/loader";
+
+// base
 @import "./base/base";
 @import "./base/typography";
 
+// components
 @import "./components/buttons";
-@import "./components/card";
 
+// layout
 @import "./layout/header";
-@import "./layout/nav";
 @import "./layout/container";
 @import "./layout/footer";
 
+// pages
 @import "./pages/homepage";
 @import "./pages/menu";

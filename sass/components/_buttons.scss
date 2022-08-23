@@ -6,7 +6,7 @@
   @include shadow;
   &--pink {
     @include background-gradient;
-    color: $color-bg-primary;
+    color: $color-white;
     &:hover {
       @include shadow-hover;
       @include background-gradient--light;
@@ -14,7 +14,7 @@
   }
 }
 
-// SECTION RESTAURANT -- HEART
+// HEART
 .nolike {
   z-index: 1;
   overflow: hidden;
@@ -31,9 +31,4 @@
   -webkit-text-fill-color: transparent;
   transition: all 1s;
   z-index: -1;
-}
-
-.nolike:hover .like::before {
-  display: block;
-  animation: sizing 0.5s;
 }

@@ -1,0 +1,144 @@
+// SECTION LOCALISATION
+.localisation {
+  @include flex-align-center;
+  background-color: $color-white-soft;
+  z-index: -1;
+  padding-left: 50px;
+
+  i {
+    margin-right: 0px;
+  }
+  form {
+    font-weight: map-get($font-weights, "bold");
+    margin: 15px;
+    input {
+      color: $color-grey-hard;
+      background-color: transparent;
+      border: 0px;
+    }
+  }
+}
+// SECTION EXPLORE
+.explore {
+  background-color: $color-white-softer;
+  @include flex-align-center;
+  flex-direction: column;
+  padding: 40px;
+  h2 {
+    margin: 0px;
+  }
+  p {
+    color: $color-grey-soft;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+// SECTION STEP
+.step {
+  h2 {
+    width: 100%;
+    @include flex-align-start;
+  }
+  p:first-child {
+    @include flex-align-center;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: -10px;
+  }
+  i {
+    position: absolute;
+    left: 30px;
+  }
+  p:last-child {
+    font-weight: map-get($font-weights, medium);
+  }
+  &__card {
+    position: relative;
+    background-color: $color-white-softer;
+    @include card;
+    &:hover {
+      @include shadow-hover;
+    }
+    @include flex-align-center;
+    &:hover {
+      background-color: rgba($color-primary, 0.1);
+      i {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+// SECTION RESTAURANT
+.restaurant {
+  background-color: $color-white-softer;
+  h2 {
+    width: 100%;
+    @include flex-align-start;
+  }
+  &__body {
+    line-height: 10px;
+    padding: 5px;
+    @include flex-align-between;
+    flex-direction: row;
+    p {
+      color: $color-grey-hard;
+    }
+    h3 {
+      margin-top: 10px;
+    }
+  }
+  &__card {
+    @include card;
+    position: relative;
+    max-height: 300px;
+    width: 100%;
+    &:hover {
+      @include shadow-hover;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      max-height: calc(100% - 70px);
+      border-radius: 15px 15px 0 0;
+    }
+    &--new {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background-color: #99e2d0;
+      border-radius: 5px;
+      color: #1f997c;
+      padding: 10px;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__card {
+      width: 50%;
+    }
+  }
+}
+@media only screen and (min-width: map-get($breakpoints, laptop)) {
+  .step {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__card {
+      width: 30%;
+    }
+  }
+}
