@@ -1,19 +1,25 @@
 # P3-Ohmyfood
 
-Openclassrooms projects
+This project is a software to check and book restaurant online.
 
 ## Getting started
 
 ### Step 1: :
 
-#### NPM
+#### install dependencies
 
 ```shell
 npm install
 ```
 
-#### npm
+### Step 2: :
+
+#### compile stylesheets
 
 ```shell
 npm run sass
 ```
+
+#### link to deployment
+
+https://clementleroux-dev.github.io/P3-Ohmyfood/index.html
