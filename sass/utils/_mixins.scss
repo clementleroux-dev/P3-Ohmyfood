@@ -40,7 +40,7 @@
 }
 
 @mixin background-gradient--light {
-  background: lighten ($color-primary, 10%);
+  background: lighten($color-primary, 10%);
   background: linear-gradient(
     0deg,
     lighten($color-primary, 10%) 0%,

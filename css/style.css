@@ -259,7 +259,7 @@ p {
 }
 .btn--pink:hover {
   box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.47);
-  background: lighten #9356dc, 10%;
+  background: #ae80e5;
   background: linear-gradient(0deg, #ae80e5 0%, #fface8 100%);
 }
 
