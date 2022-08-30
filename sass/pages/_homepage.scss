@@ -51,8 +51,7 @@
     left: -10px;
   }
   i {
-    position: absolute;
-    left: 30px;
+    margin: 0 30px;
   }
   p:last-child {
     font-weight: map-get($font-weights, medium);
@@ -63,14 +62,13 @@
     @include card;
     &:hover {
       @include shadow-hover;
-    }
-    @include flex-align-center;
-    &:hover {
       background-color: rgba($color-primary, 0.1);
       i {
         color: $color-primary;
       }
     }
+    @include flex-align-center;
+    justify-content: left;
   }
 }
 
